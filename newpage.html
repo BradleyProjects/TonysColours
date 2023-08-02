@@ -1,0 +1,4152 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        AjaxContainer: 'div.dmBody',
+        WrappingContainer: 'div.dmOuter',
+        HomeUrl: 'https://www.tonyscolours.co.za/',
+        AccountUUID: '52fffdd495354f418ecfa045717ee96d',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: 'c79180a1',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Tue Apr 18 07:15:28 UTC 2023',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'newpage',
+        InitialPageUuid: '38f9cfc296f749b4bc11b3d7c340c830',
+        InitialEncodedPageAlias: 'bmV3cGFnZQ==',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '9500',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        NotificationSubDomain: 'tonyscolours',
+        HasCustomDomain: true,
+        showCookieNotification: true,
+        cookiesNotificationMarkup: ' <div> <p class=\"rteBlock\">We use cookies to ensure that we give you the best experience on our website. To learn more, go to the <a value=\"privacy\" label=\"\" type=\"page\" href=\"\/privacy\" data-runtime-url=\"\/privacy\">Privacy Page<\/a>.<\/p> \n<\/div> \n',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: 'en',
+        currentLocale: 'en',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: -1,
+            NavbarLiveHomePage: 'https://www.tonyscolours.co.za/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: true,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.tonyscolours.co.za/newpage">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="apple-touch-icon" href="https://irp.cdn-website.com/c79180a1/dms3rep/multi/Final+Logo+2.png"/>
+
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/c79180a1/site_favicon_16_1658128425148.ico"/>
+
+<!-- End favorite icons -->
+
+<link rel="preconnect" href="https://lirp.cdn-website.com/" crossorigin />
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if(!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function() {
+            },
+            getCurrentDeviceType: function() {
+                return window._currentDevice;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+<!-- loadCSS function -->
+
+
+
+<script>
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if(storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false
+                    storedPageCssLink.disabled = false;
+                    cssLinks = null;
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if(link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      }  
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def(){this.promise=new Promise((function(a,b){this.resolve=a,this.reject=b}).bind(this))}
+    const defs={};
+    window.getDeferred=function(a){return null==defs[a]&&(defs[a]=new Def),defs[a]}
+    window.waitForDeferred = function (b, a, c) {
+      let d = window?.getDeferred?.(b);
+      d
+        ? d.promise.then(a)
+        : c && ["complete", "interactive"].includes(document.readyState)
+        ? setTimeout(a, 1)
+        : c
+        ? document.addEventListener("DOMContentLoaded", a)
+        : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}
+</style>
+<style id="cssVariables" type="text/css">
+    
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function -->
+
+
+
+<script>
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if(storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false
+                    storedPageCssLink.disabled = false;
+                    cssLinks = null;
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if(link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      }  
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css?family=Roboto:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Montserrat:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Be+Vietnam:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic&amp;subset=latin-ext&amp;display=swap"  />
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-new-->
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/3531/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-new.min.css" />
+
+<!-- End of RT CSS Include -->
+
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/production_3531/82f9d61e5e53fc38ed207f6eb24a0c8f.css" id="widgetCSS" />
+
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="newpage"] #dm [data-show-on-page-only="newpage"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/c79180a1/files/c79180a1_1.min.css?v=303" id="siteGlobalCss" />
+
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+    .widget-1f5975 .copyright {
+    font-size: 13px;
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+}
+    
+    .widget-5bd886 .full {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.widget-5bd886 .iconBg {
+   display: block !important;
+   width: 100px;
+}
+
+.widget-5bd886 < .iconBg {
+   width: 66px;
+}
+
+.widget-5bd886 .whatsapp-fill { /* default color */
+   fill: currentColor;
+}
+
+.widget-5bd886 .wa-btn-transparent {
+    background: rgba(0,0,0,0) !important;
+    border-color: rgba(0,0,0,0) !important;
+    box-shadow: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.widget-5bd886 a {
+    padding: 0 !important;
+}
+
+.widget-5bd886 .green-wa {
+    flex: 1;
+    height: 80%;
+}
+
+.widget-5bd886 .green-wa img {
+    height: 100%;
+}
+
+.widget-5bd886 .wa-btns {
+    margin: 0 !important;
+}
+
+.widget-5bd886 .flex-text {
+    flex: 3;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    text-align: left;
+}
+    
+    .widget-5bd886 {
+    /*overflow: hidden;*/
+    margin: 10px auto;
+    width: 278px;
+}
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style
+        id="additionalGlobalCss" type="text/css"
+>
+</style>
+
+<style id="pagestyle" type="text/css">
+    *#dm *.dmBody div.dmforminput textarea
+{
+	font-style:italic !important;
+}
+*#dm *.dmBody div.dmforminput *.fileUploadLink
+{
+	font-style:italic !important;
+}
+*#dm *.dmBody div.checkboxwrapper span
+{
+	font-style:italic !important;
+}
+*#dm *.dmBody div.radiowrapper span
+{
+	font-style:italic !important;
+}
+*#dm *.dmBody div.caption-container *.caption-text *.rteBlock
+{
+	color:rgba(153,153,153,1) !important;
+}
+*#dm *.dmBody *.u_1420290172 *.dmformsubmit
+{
+	float:none !important;
+	display:block !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+}
+*#dm *.dmBody div.u_1833938687
+{
+	background-color:rgba(247,247,247,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 input:not([type="submit"])
+{
+	border-style:solid !important;
+	border-width:0 !important;
+	background-color:rgba(255,255,255,1) !important;
+	border-bottom-width:2px !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:rgba(225,225,225,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 textarea
+{
+	border-style:solid !important;
+	border-width:0 !important;
+	background-color:rgba(255,255,255,1) !important;
+	border-bottom-width:2px !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:rgba(225,225,225,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 select
+{
+	border-style:solid !important;
+	border-width:0 !important;
+	background-color:rgba(255,255,255,1) !important;
+	border-bottom-width:2px !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:rgba(225,225,225,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 *.dmforminput label
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 *.dmforminput input
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 *.dmforminput textarea
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 *.dmforminput *.fileUploadLink
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 *.checkboxwrapper span
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 *.radiowrapper span
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1536472917
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody *.u_1388572849:before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_1388572849.before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_1388572849>.bgExtraLayerOverlay
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody div.u_1388572849:before
+{
+	background-color:rgba(23,38,36,1) !important;
+	opacity:0.21 !important;
+}
+*#dm *.dmBody div.u_1388572849.before
+{
+	background-color:rgba(23,38,36,1) !important;
+	opacity:0.21 !important;
+}
+*#dm *.dmBody div.u_1388572849>.bgExtraLayerOverlay
+{
+	background-color:rgba(23,38,36,1) !important;
+	opacity:0.21 !important;
+}
+*#dm *.dmBody div.u_1391464671
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1024105452
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1524928831
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1222051548
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1541534842
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1035776603
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1609115048
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1045121006
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1020118649
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1243265607
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_PaintSystems
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Basecoat
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Two-KToner
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Clearcoat
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Hardener
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Primers
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Solvents
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_DucoToners
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_QDEnamels
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_PaintAncillaries
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody nav.u_1359232813
+{
+	color:black !important;
+}
+*#dm *.dmBody div.u_1388572849
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+	background-color:rgba(23,38,36,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable)
+{
+	color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody div.u_1420290172 .m-recaptcha
+{
+	color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody div.u_TWO-KPaint
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody *.u_1413781403 *.dmformsubmit
+{
+	float:none !important;
+	display:block !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+}
+*#dm *.dmBody div.u_1413781403 input:not([type="submit"])
+{
+	border-style:solid !important;
+	border-width:0 !important;
+	background-color:rgba(255,255,255,1) !important;
+	border-bottom-width:2px !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:rgba(225,225,225,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 textarea
+{
+	border-style:solid !important;
+	border-width:0 !important;
+	background-color:rgba(255,255,255,1) !important;
+	border-bottom-width:2px !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:rgba(225,225,225,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 select
+{
+	border-style:solid !important;
+	border-width:0 !important;
+	background-color:rgba(255,255,255,1) !important;
+	border-bottom-width:2px !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:rgba(225,225,225,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 *.dmforminput label
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 *.dmforminput input
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 *.dmforminput textarea
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 *.dmforminput *.fileUploadLink
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 *.checkboxwrapper span
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 *.radiowrapper span
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable)
+{
+	color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody div.u_1413781403 .m-recaptcha
+{
+	color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody *.u_1394363445:before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_1394363445.before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_1394363445>*.bgExtraLayerOverlay
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody div.u_1394363445:before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_1394363445.before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_1394363445>*.bgExtraLayerOverlay
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody h1.u_1495613423
+{
+	line-height:initial !important;
+}
+*#dm *.dmBody div.u_1530895107
+{
+	border-style:solid !important;
+	border-width:0 !important;
+}
+*#dm *.dmBody div.u_1394363445
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody *.u_1530895107 .photoGalleryThumbs .image-container a
+{
+	background-size:contain !important;
+}
+*#dm *.dmBody div.u_1147875975
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Fillers
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1078924050
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_pa_5132352
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Protectors
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Getaquote
+{
+	background-color:rgba(234,242,239,1) !important;
+}
+*#dm *.dmBody div.u_1328563284
+{
+	background-color:rgba(234,242,239,1) !important;
+	border-radius:15px !important;
+	-moz-border-radius:15px !important;
+	-webkit-border-radius:15px !important;
+}
+*#dm *.dmBody *.u_1376024436 *.dmformsubmit
+{
+	float:none !important;
+	display:block !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+}
+*#dm *.dmBody div.u_1376024436 input:not([type="submit"])
+{
+	border-style:solid !important;
+	border-width:0 !important;
+	background-color:rgba(255,255,255,1) !important;
+	border-bottom-width:2px !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:rgba(225,225,225,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 textarea
+{
+	border-style:solid !important;
+	border-width:0 !important;
+	background-color:rgba(255,255,255,1) !important;
+	border-bottom-width:2px !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:rgba(225,225,225,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 select
+{
+	border-style:solid !important;
+	border-width:0 !important;
+	background-color:rgba(255,255,255,1) !important;
+	border-bottom-width:2px !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:rgba(225,225,225,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 *.dmforminput label
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 *.dmforminput input
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 *.dmforminput textarea
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 *.dmforminput *.fileUploadLink
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 *.checkboxwrapper span
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 *.radiowrapper span
+{
+	color:rgba(49,49,49,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable)
+{
+	color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody div.u_1376024436 .m-recaptcha
+{
+	color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody div.u_1197096133
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody nav.u_1955741426
+{
+	color:white !important;
+}
+*#dm *.dmBody div.u_1848817240
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1846716916
+{
+	background-color:rgba(40,63,59,1) !important;
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/md/dmtmpl/6f03d883-7410-44fe-9858-a5fee0baea5a/dms3rep/multi/opt/painting_transparent_bg3-2880w.png) !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1352278673
+{
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/Screenshot+2022-08-02+at+12.17.07-2880w.png) !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1986756397
+{
+	background-color:rgba(0,0,0,1) !important;
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/solvents-2880w.jpg) !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_pa_7261593
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1870054487
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1228580140
+{
+	background-color:rgba(234,242,239,1) !important;
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/md/dmtmpl/6f03d883-7410-44fe-9858-a5fee0baea5a/dms3rep/multi/opt/painting_transparent_bg3-2880w.png) !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1526749326
+{
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/Screenshot+2022-08-02+at+12.17.07-2880w.png) !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1856607306
+{
+	background-color:rgba(0,0,0,1) !important;
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/protector-2880w.jpg) !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_pa_5023940
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_Protectors
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    *#dm *.dmBody div.caption-container *.caption-text *.rteBlock
+{
+	font-size:16px !important;
+}
+*#dm *.dmBody div.u_1420290172 *.dmformsubmit
+{
+	width:99px !important;
+}
+*#dm *.dmBody h3.u_1087619964
+{
+	margin-bottom:0 !important;
+	margin-top:0 !important;
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}
+*#dm *.dmBody div.u_1833938687
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:100px !important;
+	padding-left:40px !important;
+	padding-bottom:100px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:none !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:40px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1402605857
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1420290172 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable)
+{
+	font-size:16px !important;
+}
+*#dm *.dmBody div.u_1420290172 .m-recaptcha
+{
+	font-size:16px !important;
+}
+*#dm *.dmBody div.u_1087619964
+{
+	margin-bottom:0 !important;
+	margin-top:0 !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 246px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:707.997px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1062646077
+{
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 217px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-left:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:763.999px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1328563284
+{
+	margin-left:0 !important;
+	padding-top:40px !important;
+	padding-left:0 !important;
+	padding-bottom:30px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+}
+*#dm *.dmBody div.u_1420290172
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 218px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:763.991px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1865953470
+{
+	important:true !important;
+	width:calc(100% - 0px) !important;
+	height:auto !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	position:relative !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:100% !important;
+	margin-top:24px !important;
+	margin-bottom:-10px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1391464671
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1024105452
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1524928831
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1222051548
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1541534842
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1035776603
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1609115048
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1045121006
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1020118649
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1243265607
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_PaintSystems
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_Basecoat
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_Two-KToner
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_Clearcoat
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_Hardener
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_Primers
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_Solvents
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:40px !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:40px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_DucoToners
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_QDEnamels
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_PaintAncillaries
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1388572849
+{
+	padding-top:140px !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:0 !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:none !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-position:50% 50% !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1536472917
+{
+	margin-left:0 !important;
+	padding-top:50px !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+}
+*#dm *.dmBody div.u_1672288628
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:732px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:100% !important;
+	margin-top:0 !important;
+	margin-bottom:30px !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_TWO-KPaint
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1413781403 *.dmformsubmit
+{
+	width:99px !important;
+}
+*#dm *.dmBody div.u_1413781403 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable)
+{
+	font-size:16px !important;
+}
+*#dm *.dmBody div.u_1413781403 .m-recaptcha
+{
+	font-size:16px !important;
+}
+*#dm *.dmBody div.u_1413781403
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 218px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:763.991px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody h1.u_1495613423
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:0 !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody *.u_1530895107 .photoGalleryThumbs
+{
+	padding:10px !important;
+}
+*#dm *.dmBody *.u_1530895107 .layout-container
+{
+	padding:10px !important;
+}
+*#dm *.dmBody *.u_1530895107 .photoGalleryViewAll
+{
+	padding:0 20px !important;
+}
+*#dm *.dmBody div.u_1394363445
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:60px !important;
+	padding-left:40px !important;
+	padding-bottom:20px !important;
+	max-width:none !important;
+	padding-right:40px !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-attachment:fixed !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1530895107
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 62px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:1076px !important;
+	margin-top:10px !important;
+	margin-bottom:10px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody *.u_1530895107 .photoGalleryThumbs .image-container a
+{
+	padding-top:130px !important;
+}
+*#dm *.dmBody div.u_1147875975
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_Fillers
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1495613423
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:100% !important;
+	margin-top:-51px !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1078924050
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_pa_5132352
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_Protectors
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:40px !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:40px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1408432960
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:584px !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:100% !important;
+	margin-top:10px !important;
+	margin-bottom:10px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_Getaquote
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:40px !important;
+	padding-bottom:0 !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:0 !important;
+	margin-bottom:-20px !important;
+	padding-right:40px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1376024436 *.dmformsubmit
+{
+	width:99px !important;
+}
+*#dm *.dmBody div.u_1376024436 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable)
+{
+	font-size:16px !important;
+}
+*#dm *.dmBody div.u_1376024436 .m-recaptcha
+{
+	font-size:16px !important;
+}
+*#dm *.dmBody div.u_1376024436
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 218px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:763.991px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1197096133
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1848817240
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:40px !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:40px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1986756397
+{
+	padding-top:100px !important;
+	padding-bottom:100px !important;
+	margin-left:0 !important;
+	padding-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:0 !important;
+	background-position:50% 50% !important;
+	background-repeat:no-repeat !important;
+	background-size:contain !important;
+}
+*#dm *.dmBody div.u_1131630358
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:642.422px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+}
+*#dm *.dmBody div.u_1323250182
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:642.422px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:0 !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	display:block !important;
+}
+*#dm *.dmBody a.u_1389621763
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:61px !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:219.617px !important;
+	margin-left:0 !important;
+	max-width:218px !important;
+	margin-top:29px !important;
+	margin-bottom:10px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1846716916
+{
+	padding-top:100px !important;
+	padding-bottom:100px !important;
+	padding-right:50px !important;
+	padding-left:50px !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	background-position:0 0 !important;
+}
+*#dm *.dmBody div.u_1762419698
+{
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:0 !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:100% !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1352278673
+{
+	padding-top:100px !important;
+	padding-left:0 !important;
+	margin-left:0 !important;
+	background-position:100% 50% !important;
+	background-repeat:no-repeat !important;
+	background-size:contain !important;
+	padding-bottom:100px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+}
+*#dm *.dmBody div.u_pa_7261593
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1870054487
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:40px !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:40px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1856607306
+{
+	padding-top:100px !important;
+	padding-bottom:100px !important;
+	margin-left:0 !important;
+	padding-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:0 !important;
+	background-position:50% 50% !important;
+	background-repeat:no-repeat !important;
+	background-size:contain !important;
+}
+*#dm *.dmBody div.u_1387908932
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:600.812px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+}
+*#dm *.dmBody div.u_1914262853
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:600.812px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+}
+*#dm *.dmBody div.u_1192840012
+{
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:0 !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:100% !important;
+	min-width:0 !important;
+	text-align:center !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1228580140
+{
+	padding-top:100px !important;
+	padding-bottom:100px !important;
+	padding-right:50px !important;
+	padding-left:50px !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1526749326
+{
+	padding-top:100px !important;
+	padding-left:0 !important;
+	margin-left:0 !important;
+	padding-bottom:100px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+	background-position:0 50% !important;
+	background-repeat:no-repeat !important;
+	background-size:contain !important;
+}
+*#dm *.dmBody div.u_pa_5023940
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:0 !important;
+	padding-bottom:100px !important;
+	max-width:100% !important;
+	padding-right:15px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody a.u_1845312861
+{
+	display:block !important;
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:218px !important;
+	position:relative !important;
+	height:61px !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	max-width:100% !important;
+	padding-right:0px !important;
+	min-width:0 !important;
+	text-align:center !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	margin-top:10px !important;
+	margin-bottom:10px !important;
+}
+*#dm *.dmBody a.u_1564551556
+{
+	display:block !important;
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:218px !important;
+	position:relative !important;
+	height:61px !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	max-width:100% !important;
+	padding-right:0px !important;
+	min-width:0 !important;
+	text-align:center !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	margin-top:10px !important;
+	margin-bottom:10px !important;
+}
+*#dm *.dmBody a.u_1617790362
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:218px !important;
+	position:relative !important;
+	height:61px !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:10px !important;
+	margin-bottom:10px !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody a.u_1573728410
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:61px !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	max-width:218px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody a.u_1573728410
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:61px !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	max-width:218px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-22, .size-22, .size-22 > font { font-size: 22px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-22, .size-22, .size-22 > font { font-size: 22px !important; }.font-size-22, .size-22, .size-22 > font { font-size: 22px !important; }.font-size-40, .size-40, .size-40 > font { font-size: 40px !important; }.font-size-40, .size-40, .size-40 > font { font-size: 40px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+</style>
+
+
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="https://www.tonyscolours.co.za//feed/rss2"/>
+  <link type="application/atom+xml" rel="alternate" href="https://www.tonyscolours.co.za//feed/atom"/>
+  <meta property="og:type" content="website"/>
+  <title>
+    
+    Tony's Colours | Fillers Puttys and-Solvents
+  
+  </title>
+  <meta name="keywords" content="Tony's Colours, Paint products Johannesburg, Automotive Paint Johannesburg, Industrial Signage Paint Johannesburg, Special Paint Solutions Johannesburg, Commercial Paint, Johannesburg, Paint products, Automotive Paint, Industrial Signage Paint, Special Paint Solutions, Fillers Puttys and-Solvents"/>
+  <meta name="description" content="Body filler is an important product in automotive painting, and we at Tonys Colours are proud to offer the best products at great prices."/>
+  <!-- Google Tag Manager -->  <script>
+
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WDL699V');
+
+  
+
+  
+
+  
+
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Tony's Colours | Fillers Puttys and-Solvents"/>
+  <meta name="twitter:description" content="Body filler is an important product in automotive painting, and we at Tonys Colours are proud to offer the best products at great prices."/>
+  <meta name="twitter:image" content="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/Final+Logo+1-1920w.png"/>
+  <meta property="og:description" content="Body filler is an important product in automotive painting, and we at Tonys Colours are proud to offer the best products at great prices."/>
+  <meta property="og:title" content="Tony's Colours | Fillers Puttys and-Solvents"/>
+  <meta property="og:image" content="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/Final+Logo+1-1920w.png"/>
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="newpage"  class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet " style="padding:0;margin:0;"
+      
+      >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true" desktop-global-classes="header-over-content" tablet-global-classes="header-over-content"> <div dmtemplateid="Hamburger" data-responsive-name="ResponsiveDesktopTopTabletHamburger" class="runtime-module-container dm-bfs dm-layout-sec hasAnimations rows-1200 inMiniHeaderMode hasStickyHeader hamburger-reverse header-over-content dmPageBody d-page-1716942098 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-buttonstyle="BORDER_SHORT" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="site_content"> <div class="p_hfcontainer showOnMedium"> <div id="hamburger-drawer" class="hamburger-drawer layout-drawer" layout="e9d510f4eb904e939c2be8efaf777e6e===header" data-origin="side-reverse"> <div class="u_1887881241 dmRespRow" style="text-align: center;" id="1887881241"> <div class="dmRespColsWrapper" id="1639894052"> <div class="u_1386642339 dmRespCol small-12 medium-12 large-12 empty-column" id="1386642339"></div> 
+</div> 
+</div> 
+ <div class="u_1128536661 dmRespRow middleDrawerRow" style="text-align: center;" id="1128536661"> <div class="dmRespColsWrapper" id="1395551562"> <div class="dmRespCol small-12 u_1217590331 medium-12 large-12" id="1217590331"> <nav class="u_1042692520 effect-bottom main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HIDE" id="1042692520" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item  dmUDNavigationItem_00  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Home
+        " data-auto="page-text-style">Home<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/about-us" class="unifiednav__item  dmUDNavigationItem_01010138659  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         About us
+        " data-auto="page-text-style">About us<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-Reception" class="unifiednav__item  dmUDNavigationItem_010101165961  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Reception
+          " data-auto="page-text-style">Our Tonys Gallery - Reception<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-Adminoffice" class="unifiednav__item  dmUDNavigationItem_010101775903  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Admin office
+          " data-auto="page-text-style">Our Tonys Gallery - Admin office<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-Warehouse" class="unifiednav__item  dmUDNavigationItem_010101879917  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Warehouse
+          " data-auto="page-text-style">Our Tonys Gallery - Warehouse<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-MixingRoom" class="unifiednav__item  dmUDNavigationItem_010101366925  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Mixing Room
+          " data-auto="page-text-style">Our Tonys Gallery - Mixing Room<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-Dispatch" class="unifiednav__item  dmUDNavigationItem_01010193581  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Dispatch
+          " data-auto="page-text-style">Our Tonys Gallery - Dispatch<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_010101945430  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Our Products
+        " data-auto="page-text-style">Our Products<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/automotive-paint" class="unifiednav__item  dmUDNavigationItem_010101417090  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Automotive Paint
+          " data-auto="page-text-style">Automotive Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#PaintSystems" class="unifiednav__item  dmUDNavigationItem_010101211001  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Paint Systems
+            " data-auto="page-text-style">Paint Systems<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Basecoat" class="unifiednav__item  dmUDNavigationItem_010101496638  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Basecoat
+            " data-auto="page-text-style">Basecoat<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#TWO-KPaint" class="unifiednav__item  dmUDNavigationItem_010101919703  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             2K Paint
+            " data-auto="page-text-style">2K Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Clearcoat" class="unifiednav__item  dmUDNavigationItem_010101145521  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clearcoat
+            " data-auto="page-text-style">Clearcoat<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Primers" class="unifiednav__item  dmUDNavigationItem_010101440383  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primers
+            " data-auto="page-text-style">Primers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#NPaint" class="unifiednav__item  dmUDNavigationItem_010101313066  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Hardener" class="unifiednav__item  dmUDNavigationItem_010101262796  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             N/C Paint
+            " data-auto="page-text-style">N/C Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/Commercial-paint" class="unifiednav__item  dmUDNavigationItem_010101887066  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Commercial Paint
+          " data-auto="page-text-style">Commercial Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#TWO-KPaint" class="unifiednav__item  dmUDNavigationItem_010101502689  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             2K Paint
+            " data-auto="page-text-style">2K Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#Clearcoat" class="unifiednav__item  dmUDNavigationItem_010101870426  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clearcoat
+            " data-auto="page-text-style">Clearcoat<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#Hardener" class="unifiednav__item  dmUDNavigationItem_010101776328  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#Primers" class="unifiednav__item  dmUDNavigationItem_010101709544  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primers
+            " data-auto="page-text-style">Primers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#QDPaints" class="unifiednav__item  dmUDNavigationItem_010101508852  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             QD Paints
+            " data-auto="page-text-style">QD Paints<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#NCPaint" class="unifiednav__item  dmUDNavigationItem_010101541946  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             N/C Paint
+            " data-auto="page-text-style">N/C Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#PMA-WaterBased" class="unifiednav__item  dmUDNavigationItem_010101663462  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMA - Water Based
+            " data-auto="page-text-style">PMA - Water Based<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#PMI-SolventBased" class="unifiednav__item  dmUDNavigationItem_010101422614  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMI - Solvent Based
+            " data-auto="page-text-style">PMI - Solvent Based<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/signage-and-industrial-paint" class="unifiednav__item  dmUDNavigationItem_010101492990  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Signage & Industrial Paint
+          " data-auto="page-text-style">Signage &amp; Industrial Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#TWO-KPaint" class="unifiednav__item  dmUDNavigationItem_010101836636  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             2K Paint
+            " data-auto="page-text-style">2K Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#Clearcoat" class="unifiednav__item  dmUDNavigationItem_010101301779  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clearcoat
+            " data-auto="page-text-style">Clearcoat<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#Hardener" class="unifiednav__item  dmUDNavigationItem_010101745034  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#Primers" class="unifiednav__item  dmUDNavigationItem_010101771553  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primers
+            " data-auto="page-text-style">Primers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#QDPaints" class="unifiednav__item  dmUDNavigationItem_010101744113  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             QD Paints
+            " data-auto="page-text-style">QD Paints<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#NCPaints" class="unifiednav__item  dmUDNavigationItem_010101331664  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             NC Paints
+            " data-auto="page-text-style">NC Paints<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#PMA-WaterBased" class="unifiednav__item  dmUDNavigationItem_010101359096  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMA - Water Based
+            " data-auto="page-text-style">PMA - Water Based<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#PMI-SolventBased" class="unifiednav__item  dmUDNavigationItem_010101882884  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMI - Solvent Based
+            " data-auto="page-text-style">PMI - Solvent Based<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/Fillers-Puttys-and-solvents" class="unifiednav__item  dmUDNavigationItem_010101966800  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Fillers , Putty's & Stone Chip
+          " data-auto="page-text-style">Fillers , Putty's &amp; Stone Chip<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Fillers-Puttys-and-solvents#Fillers" class="unifiednav__item  dmUDNavigationItem_010101616689  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Fillers
+            " data-auto="page-text-style">Fillers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Fillers-Puttys-and-solvents#Protectors" class="unifiednav__item  dmUDNavigationItem_010101397208  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Putty's
+            " data-auto="page-text-style">Putty's<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Fillers-Puttys-and-solvents#StoneChips" class="unifiednav__item  dmUDNavigationItem_010101803512  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Stone Chips
+            " data-auto="page-text-style">Stone Chips<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/newpage" class="unifiednav__item  dmNavItemSelected  dmUDNavigationItem_01010114828  unifiednav__item_has-sub-nav" target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
+           Solvents & Protectors
+          " data-auto="page-text-style">Solvents &amp; Protectors<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/newpage#Solvents" class="unifiednav__item  dmUDNavigationItem_010101987450  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Solvents
+            " data-auto="page-text-style">Solvents<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/newpage#Protectors" class="unifiednav__item  dmUDNavigationItem_010101962791  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Protectors
+            " data-auto="page-text-style">Protectors<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrassives-and-accessories" class="unifiednav__item  dmUDNavigationItem_010101497056  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Abrasive's & Accessories
+          " data-auto="page-text-style">Abrasive's &amp; Accessories<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#Abrasives" class="unifiednav__item  dmUDNavigationItem_010101148124  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Abrasives
+            " data-auto="page-text-style">Abrasives<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#MaskingTapes" class="unifiednav__item  dmUDNavigationItem_010101239165  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Masking Tapes
+            " data-auto="page-text-style">Masking Tapes<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#PlasticRepairs" class="unifiednav__item  dmUDNavigationItem_010101238308  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Plastic Repairs
+            " data-auto="page-text-style">Plastic Repairs<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#PolishingandMops" class="unifiednav__item  dmUDNavigationItem_010101280183  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Polishing and Mops
+            " data-auto="page-text-style">Polishing and Mops<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#SoundDeadeningPads" class="unifiednav__item  dmUDNavigationItem_010101800446  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Sound Deadening Pads
+            " data-auto="page-text-style">Sound Deadening Pads<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#Sealers" class="unifiednav__item  dmUDNavigationItem_010101733129  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Sealers
+            " data-auto="page-text-style">Sealers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#Maskingplastic" class="unifiednav__item  dmUDNavigationItem_010101583862  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Masking plastic
+            " data-auto="page-text-style">Masking plastic<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#MixingCups" class="unifiednav__item  dmUDNavigationItem_01010137457  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Mixing Cups
+            " data-auto="page-text-style">Mixing Cups<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#SiliconeRemover" class="unifiednav__item  dmUDNavigationItem_010101614854  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Silicone Remover
+            " data-auto="page-text-style">Silicone Remover<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/spray-painting-tools-and-equipments" class="unifiednav__item  dmUDNavigationItem_010101642614  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Spray Painting Tools & Equipment
+          " data-auto="page-text-style">Spray Painting Tools &amp; Equipment<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#WeldingEquipment" class="unifiednav__item  dmUDNavigationItem_010101414642  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Welding Equipment
+            " data-auto="page-text-style">Welding Equipment<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#SprayGuns" class="unifiednav__item  dmUDNavigationItem_010101506995  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Spray Guns
+            " data-auto="page-text-style">Spray Guns<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#AirTools" class="unifiednav__item  dmUDNavigationItem_010101489366  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Air Tools
+            " data-auto="page-text-style">Air Tools<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#PanelBeatingTools" class="unifiednav__item  dmUDNavigationItem_010101141319  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Panel Beating Tools
+            " data-auto="page-text-style">Panel Beating Tools<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#InfraredHeaters" class="unifiednav__item  dmUDNavigationItem_010101116259  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Infrared Heaters
+            " data-auto="page-text-style">Infrared Heaters<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#OrbitalSanders" class="unifiednav__item  dmUDNavigationItem_010101655973  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Orbital Sanders
+            " data-auto="page-text-style">Orbital Sanders<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/monthly-specials" class="unifiednav__item  dmUDNavigationItem_010101117665  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Monthly Specials
+        " data-auto="page-text-style">Monthly Specials<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/our-products-gallery" class="unifiednav__item  dmUDNavigationItem_010101907280  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Industry Gallery
+        " data-auto="page-text-style">Industry Gallery<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Automotive" class="unifiednav__item  dmUDNavigationItem_010101157709  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Automotive
+          " data-auto="page-text-style">Automotive<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Commercial" class="unifiednav__item  dmUDNavigationItem_010101634854  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Commercial
+          " data-auto="page-text-style">Commercial<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Industrial" class="unifiednav__item  dmUDNavigationItem_010101844194  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Industrial
+          " data-auto="page-text-style">Industrial<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Signage" class="unifiednav__item  dmUDNavigationItem_010101387449  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Signage
+          " data-auto="page-text-style">Signage<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Boats" class="unifiednav__item  dmUDNavigationItem_010101144158  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Boats
+          " data-auto="page-text-style">Boats<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Bikes" class="unifiednav__item  dmUDNavigationItem_010101161000  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Bikes
+          " data-auto="page-text-style">Bikes<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Aeroplanes" class="unifiednav__item  dmUDNavigationItem_010101732891  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Aeroplanes
+          " data-auto="page-text-style">Aeroplanes<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#MagWheels" class="unifiednav__item  dmUDNavigationItem_010101995416  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Mag Wheels
+          " data-auto="page-text-style">Mag Wheels<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#WoodIndustry" class="unifiednav__item  dmUDNavigationItem_01010150327  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Wood Industry
+          " data-auto="page-text-style">Wood Industry<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Other" class="unifiednav__item  dmUDNavigationItem_01010138644  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Other
+          " data-auto="page-text-style">Other<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/training-centre" class="unifiednav__item  dmUDNavigationItem_010101451395  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Training Centre
+        " data-auto="page-text-style">Training Centre<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/industry-news" class="unifiednav__item  dmUDNavigationItem_010101620702  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Industry news
+        " data-auto="page-text-style">Industry news<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/faqs" class="unifiednav__item  dmUDNavigationItem_010101325676  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         FAQ's
+        " data-auto="page-text-style">FAQ's<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact-us" class="unifiednav__item  dmUDNavigationItem_010101195968  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Contact us
+        " data-auto="page-text-style">Contact us<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+ <a data-display-type="block" class="u_1562524002 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/contact-us" data-element-type="dButtonLinkId" id="1562524002"> <span class="iconBg" id="1719034482"> <span class="icon hasFontIcon icon-star" id="1882395064"></span> 
+</span> 
+ <span class="text" id="1622318772">BOOK NOW</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1984688783" style="text-align: center;" id="1984688783"> <div class="dmRespColsWrapper" id="1367316390"> <div class="u_1010934295 dmRespCol small-12 medium-12 large-12" id="1010934295"> <div class="u_1841537699 dmNewParagraph" id="1841537699" style="transition: none;"><div style="text-align: left;"><span style=""><span style=""><font style="color: rgb(255, 255, 255);"><span style="" class="font-size-22 lh-1"><b style=""><span style="font-weight: 700;">Get in touch</span></b></span></font></span></span></div></div> <div class="u_1813480382 dmNewParagraph" id="1813480382"><div><span style="font-size: 20px;"><font style="color: rgb(255, 255, 255);"></font></span></div><div><span style="font-weight: 400;" class="font-size-18 lh-1"><font style="color: rgb(255, 255, 255);"><div style="text-align: left;"><span style="font-weight: inherit;"><font style="">+27825617607</font></span></div><div style="text-align: left;"><span style="font-weight: inherit;"><font style="">tony@tonyscolours.co.za</font></span></div></font></span></div><div><span style="font-size: 20px;"><font style="color: rgb(255, 255, 255);"></font></span></div></div></div> 
+</div> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div class="site_content"> <div id="hamburger-header-container" class="showOnMedium hamburger-header-container p_hfcontainer"> <div id="hamburger-header" class="hamburger-header p_hfcontainer" layout="44dc38f951e9489490b055748e10ba9f===header" data-scrollable-target="body" data-scroll-responder-id="hamburger-header"> <div class="u_1705692124 dmRespRow" style="text-align: center;" id="1705692124"> <div class="dmRespColsWrapper" id="1469942216"> <div class="dmRespCol large-6 medium-6 small-12" id="1241490830"> <div class="u_1915668795 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1915668795"><img src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/Final+Logo+1-1920w.png" alt="" id="1257147356" class="" data-dm-image-path="https://irp.cdn-website.com/c79180a1/dms3rep/multi/Final+Logo+1.png" width="1887" height="351" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div class="dmRespCol small-12 u_1655486006 large-6 medium-6 empty-column" id="1655486006"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmHeaderContainer fHeader d-header-wrapper showOnLarge"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" layout="7f3c1de367df47d5b45ab63d33101c7b===header" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" preserve-sticky-header="true" logo-size-target="66%" secondary-image="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/Final+Logo+2-1920w.png" has-secondary-image="true"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1132181467 dmRespRow dmDefaultListContentRow fullBleedChanged fullBleedMode" style="text-align:center" id="1132181467"> <div class="dmRespColsWrapper" id="1475683606"> <div class="u_1857944392 small-12 dmRespCol large-2 medium-2" id="1857944392"> <div class="u_1137907155 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1137907155"> <a href="/" id="1389264524" file="false"><img src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/Final+Logo+2-1920w.png" alt="" id="1212943695" class="" data-dm-image-path="https://irp.cdn-website.com/c79180a1/dms3rep/multi/Final+Logo+2.png" width="1920" height="1044" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+ <div class="u_1680780281 dmRespCol small-12 large-9 medium-9" id="1680780281"> <span id="1735648757"></span> 
+ <nav class="u_1359232813 effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_1" layout-sub="submenu_horizontal_2" data-show-vertical-sub-items="HOVER" id="1359232813" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item  dmUDNavigationItem_00  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Home
+        " data-auto="page-text-style">Home<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/about-us" class="unifiednav__item  dmUDNavigationItem_01010138659  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         About us
+        " data-auto="page-text-style">About us<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-Reception" class="unifiednav__item  dmUDNavigationItem_010101165961  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Reception
+          " data-auto="page-text-style">Our Tonys Gallery - Reception<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-Adminoffice" class="unifiednav__item  dmUDNavigationItem_010101775903  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Admin office
+          " data-auto="page-text-style">Our Tonys Gallery - Admin office<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-Warehouse" class="unifiednav__item  dmUDNavigationItem_010101879917  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Warehouse
+          " data-auto="page-text-style">Our Tonys Gallery - Warehouse<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-MixingRoom" class="unifiednav__item  dmUDNavigationItem_010101366925  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Mixing Room
+          " data-auto="page-text-style">Our Tonys Gallery - Mixing Room<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/about-us#OurTonysgallery-Dispatch" class="unifiednav__item  dmUDNavigationItem_01010193581  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Our Tonys Gallery - Dispatch
+          " data-auto="page-text-style">Our Tonys Gallery - Dispatch<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_010101945430  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Our Products
+        " data-auto="page-text-style">Our Products<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/automotive-paint" class="unifiednav__item  dmUDNavigationItem_010101417090  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Automotive Paint
+          " data-auto="page-text-style">Automotive Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#PaintSystems" class="unifiednav__item  dmUDNavigationItem_010101211001  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Paint Systems
+            " data-auto="page-text-style">Paint Systems<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Basecoat" class="unifiednav__item  dmUDNavigationItem_010101496638  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Basecoat
+            " data-auto="page-text-style">Basecoat<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#TWO-KPaint" class="unifiednav__item  dmUDNavigationItem_010101919703  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             2K Paint
+            " data-auto="page-text-style">2K Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Clearcoat" class="unifiednav__item  dmUDNavigationItem_010101145521  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clearcoat
+            " data-auto="page-text-style">Clearcoat<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Primers" class="unifiednav__item  dmUDNavigationItem_010101440383  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primers
+            " data-auto="page-text-style">Primers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#NPaint" class="unifiednav__item  dmUDNavigationItem_010101313066  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Hardener" class="unifiednav__item  dmUDNavigationItem_010101262796  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             N/C Paint
+            " data-auto="page-text-style">N/C Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/Commercial-paint" class="unifiednav__item  dmUDNavigationItem_010101887066  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Commercial Paint
+          " data-auto="page-text-style">Commercial Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#TWO-KPaint" class="unifiednav__item  dmUDNavigationItem_010101502689  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             2K Paint
+            " data-auto="page-text-style">2K Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#Clearcoat" class="unifiednav__item  dmUDNavigationItem_010101870426  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clearcoat
+            " data-auto="page-text-style">Clearcoat<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#Hardener" class="unifiednav__item  dmUDNavigationItem_010101776328  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#Primers" class="unifiednav__item  dmUDNavigationItem_010101709544  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primers
+            " data-auto="page-text-style">Primers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#QDPaints" class="unifiednav__item  dmUDNavigationItem_010101508852  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             QD Paints
+            " data-auto="page-text-style">QD Paints<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#NCPaint" class="unifiednav__item  dmUDNavigationItem_010101541946  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             N/C Paint
+            " data-auto="page-text-style">N/C Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#PMA-WaterBased" class="unifiednav__item  dmUDNavigationItem_010101663462  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMA - Water Based
+            " data-auto="page-text-style">PMA - Water Based<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Commercial-paint#PMI-SolventBased" class="unifiednav__item  dmUDNavigationItem_010101422614  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMI - Solvent Based
+            " data-auto="page-text-style">PMI - Solvent Based<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/signage-and-industrial-paint" class="unifiednav__item  dmUDNavigationItem_010101492990  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Signage & Industrial Paint
+          " data-auto="page-text-style">Signage &amp; Industrial Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#TWO-KPaint" class="unifiednav__item  dmUDNavigationItem_010101836636  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             2K Paint
+            " data-auto="page-text-style">2K Paint<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#Clearcoat" class="unifiednav__item  dmUDNavigationItem_010101301779  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clearcoat
+            " data-auto="page-text-style">Clearcoat<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#Hardener" class="unifiednav__item  dmUDNavigationItem_010101745034  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#Primers" class="unifiednav__item  dmUDNavigationItem_010101771553  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primers
+            " data-auto="page-text-style">Primers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#QDPaints" class="unifiednav__item  dmUDNavigationItem_010101744113  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             QD Paints
+            " data-auto="page-text-style">QD Paints<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#NCPaints" class="unifiednav__item  dmUDNavigationItem_010101331664  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             NC Paints
+            " data-auto="page-text-style">NC Paints<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#PMA-WaterBased" class="unifiednav__item  dmUDNavigationItem_010101359096  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMA - Water Based
+            " data-auto="page-text-style">PMA - Water Based<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-and-industrial-paint#PMI-SolventBased" class="unifiednav__item  dmUDNavigationItem_010101882884  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMI - Solvent Based
+            " data-auto="page-text-style">PMI - Solvent Based<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/Fillers-Puttys-and-solvents" class="unifiednav__item  dmUDNavigationItem_010101966800  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Fillers , Putty's & Stone Chip
+          " data-auto="page-text-style">Fillers , Putty's &amp; Stone Chip<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Fillers-Puttys-and-solvents#Fillers" class="unifiednav__item  dmUDNavigationItem_010101616689  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Fillers
+            " data-auto="page-text-style">Fillers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Fillers-Puttys-and-solvents#Protectors" class="unifiednav__item  dmUDNavigationItem_010101397208  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Putty's
+            " data-auto="page-text-style">Putty's<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/Fillers-Puttys-and-solvents#StoneChips" class="unifiednav__item  dmUDNavigationItem_010101803512  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Stone Chips
+            " data-auto="page-text-style">Stone Chips<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/newpage" class="unifiednav__item  dmNavItemSelected  dmUDNavigationItem_01010114828  unifiednav__item_has-sub-nav" target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
+           Solvents & Protectors
+          " data-auto="page-text-style">Solvents &amp; Protectors<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/newpage#Solvents" class="unifiednav__item  dmUDNavigationItem_010101987450  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Solvents
+            " data-auto="page-text-style">Solvents<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/newpage#Protectors" class="unifiednav__item  dmUDNavigationItem_010101962791  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Protectors
+            " data-auto="page-text-style">Protectors<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrassives-and-accessories" class="unifiednav__item  dmUDNavigationItem_010101497056  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Abrasive's & Accessories
+          " data-auto="page-text-style">Abrasive's &amp; Accessories<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#Abrasives" class="unifiednav__item  dmUDNavigationItem_010101148124  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Abrasives
+            " data-auto="page-text-style">Abrasives<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#MaskingTapes" class="unifiednav__item  dmUDNavigationItem_010101239165  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Masking Tapes
+            " data-auto="page-text-style">Masking Tapes<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#PlasticRepairs" class="unifiednav__item  dmUDNavigationItem_010101238308  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Plastic Repairs
+            " data-auto="page-text-style">Plastic Repairs<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#PolishingandMops" class="unifiednav__item  dmUDNavigationItem_010101280183  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Polishing and Mops
+            " data-auto="page-text-style">Polishing and Mops<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#SoundDeadeningPads" class="unifiednav__item  dmUDNavigationItem_010101800446  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Sound Deadening Pads
+            " data-auto="page-text-style">Sound Deadening Pads<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#Sealers" class="unifiednav__item  dmUDNavigationItem_010101733129  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Sealers
+            " data-auto="page-text-style">Sealers<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#Maskingplastic" class="unifiednav__item  dmUDNavigationItem_010101583862  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Masking plastic
+            " data-auto="page-text-style">Masking plastic<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#MixingCups" class="unifiednav__item  dmUDNavigationItem_01010137457  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Mixing Cups
+            " data-auto="page-text-style">Mixing Cups<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/abrassives-and-accessories#SiliconeRemover" class="unifiednav__item  dmUDNavigationItem_010101614854  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Silicone Remover
+            " data-auto="page-text-style">Silicone Remover<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/spray-painting-tools-and-equipments" class="unifiednav__item  dmUDNavigationItem_010101642614  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Spray Painting Tools & Equipment
+          " data-auto="page-text-style">Spray Painting Tools &amp; Equipment<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#WeldingEquipment" class="unifiednav__item  dmUDNavigationItem_010101414642  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Welding Equipment
+            " data-auto="page-text-style">Welding Equipment<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#SprayGuns" class="unifiednav__item  dmUDNavigationItem_010101506995  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Spray Guns
+            " data-auto="page-text-style">Spray Guns<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#AirTools" class="unifiednav__item  dmUDNavigationItem_010101489366  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Air Tools
+            " data-auto="page-text-style">Air Tools<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#PanelBeatingTools" class="unifiednav__item  dmUDNavigationItem_010101141319  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Panel Beating Tools
+            " data-auto="page-text-style">Panel Beating Tools<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#InfraredHeaters" class="unifiednav__item  dmUDNavigationItem_010101116259  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Infrared Heaters
+            " data-auto="page-text-style">Infrared Heaters<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-painting-tools-and-equipments#OrbitalSanders" class="unifiednav__item  dmUDNavigationItem_010101655973  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Orbital Sanders
+            " data-auto="page-text-style">Orbital Sanders<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/monthly-specials" class="unifiednav__item  dmUDNavigationItem_010101117665  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Monthly Specials
+        " data-auto="page-text-style">Monthly Specials<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/our-products-gallery" class="unifiednav__item  dmUDNavigationItem_010101907280  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Industry Gallery
+        " data-auto="page-text-style">Industry Gallery<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Automotive" class="unifiednav__item  dmUDNavigationItem_010101157709  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Automotive
+          " data-auto="page-text-style">Automotive<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Commercial" class="unifiednav__item  dmUDNavigationItem_010101634854  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Commercial
+          " data-auto="page-text-style">Commercial<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Industrial" class="unifiednav__item  dmUDNavigationItem_010101844194  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Industrial
+          " data-auto="page-text-style">Industrial<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Signage" class="unifiednav__item  dmUDNavigationItem_010101387449  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Signage
+          " data-auto="page-text-style">Signage<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Boats" class="unifiednav__item  dmUDNavigationItem_010101144158  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Boats
+          " data-auto="page-text-style">Boats<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Bikes" class="unifiednav__item  dmUDNavigationItem_010101161000  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Bikes
+          " data-auto="page-text-style">Bikes<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Aeroplanes" class="unifiednav__item  dmUDNavigationItem_010101732891  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Aeroplanes
+          " data-auto="page-text-style">Aeroplanes<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#MagWheels" class="unifiednav__item  dmUDNavigationItem_010101995416  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Mag Wheels
+          " data-auto="page-text-style">Mag Wheels<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#WoodIndustry" class="unifiednav__item  dmUDNavigationItem_01010150327  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Wood Industry
+          " data-auto="page-text-style">Wood Industry<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-products-gallery#Other" class="unifiednav__item  dmUDNavigationItem_01010138644  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Other
+          " data-auto="page-text-style">Other<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/training-centre" class="unifiednav__item  dmUDNavigationItem_010101451395  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Training Centre
+        " data-auto="page-text-style">Training Centre<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/industry-news" class="unifiednav__item  dmUDNavigationItem_010101620702  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Industry news
+        " data-auto="page-text-style">Industry news<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/faqs" class="unifiednav__item  dmUDNavigationItem_010101325676  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         FAQ's
+        " data-auto="page-text-style">FAQ's<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact-us" class="unifiednav__item  dmUDNavigationItem_010101195968  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Contact us
+        " data-auto="page-text-style">Contact us<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="u_1562976388 dmRespCol small-12 large-1 medium-1" id="1562976388"> <span id="1080079136"></span> 
+ <a data-display-type="block" class="u_1731309061 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/monthly-specials" id="1731309061" data-element-type="dButtonLinkId" data-buttonstyle="BORDER_SHORT"> <span class="iconBg" id="1765426516"> <span class="icon hasFontIcon icon-star" id="1427470804"></span> 
+</span> 
+ <span class="text" id="1597557923">Specials</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div dmwrapped="true" id="1901957768" class="dmBody u_dmStyle_template_newpage dm-home-page" themewaschanged="true" desktop-global-classes="header-over-content" tablet-global-classes="header-over-content"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div class="u_1388572849 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1388572849"> <div class="dmRespColsWrapper" id="1574833727"> <div class="dmRespCol small-12 medium-12 large-12 u_1536472917" id="1536472917"> <span id="1842926441"></span> 
+ <div class="u_1672288628 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1672288628" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h2 class="text-align-center m-size-40"><span class="m-font-size-40" style="display: initial; color: rgb(255, 255, 255);">Solvents &amp; Protectors</span></h2> 
+</div> 
+ <div class="u_1865953470 imageWidget align-center hasFullWidth" data-element-type="image" data-widget-type="image" id="1865953470"> <a id="1458557466"><img src="https://irp.cdn-website.com/md/dmtmpl/6f03d883-7410-44fe-9858-a5fee0baea5a/dms3rep/multi/painting_border_hero_image2.svg" alt="" id="1660106724" class="" data-dm-image-path="https://irp.cdn-website.com/md/dmtmpl/6f03d883-7410-44fe-9858-a5fee0baea5a/dms3rep/multi/painting_border_hero_image2.svg" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_Solvents dmRespRow mobile-columns-reversed" style="text-align: center;" id="Solvents" data-anchor="Solvents"> <div class="dmRespColsWrapper" id="1635344730"> <div class="u_1352278673 dmRespCol small-12 large-6 medium-6" id="1352278673"> <div class="u_1762419698 dmRespRow" id="1762419698" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJbkNvbWJvIiwiZHVyYXRpb24iOjEsImRlbGF5IjowLCJpbnRlbnNpdHkiOjEsImRpciI6ImxlZnQifX0=" data-anim-desktop="fadeInCombo"> <div class="dmRespColsWrapper" id="1737581812"> <div class="u_1846716916 dmRespCol small-12 medium-12 large-12" id="1846716916"> <div class="u_1323250182 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1323250182" style="transition: opacity 1s ease-in-out 0s;"> <h3><span style="color: rgb(255, 255, 255); display: initial;">Solvents</span></h3> 
+</div> 
+ <div class="u_1131630358 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1131630358" style="transition: opacity 1s ease-in-out 0s;"><p style="line-height: 1.5;"><span style="display: initial; color: rgb(255, 255, 255);">Solvents are one of the three components of paints. They are petroleum and lacquer thinner-based chemicals which dissolve the pigment and binding agent for application. Most enamel-based paints use a mild petroleum-based solvent with an alkyd vehicle, and have a long drying and curing time.<br/></span></p></div> 
+ <a data-display-type="block" class="u_1389621763 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/Commercial-paint#Getaquote" data-element-type="dButtonLinkId" id="1389621763"> <span class="iconBg" id="1743356110"> <span class="icon hasFontIcon icon-star" id="1041610028"></span> 
+</span> 
+ <span class="text" id="1629354060">Enquire now</span> 
+</a> 
+ <a data-display-type="block" class="u_1845312861 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="tel:+27114939030" data-element-type="dButtonLinkId" id="1845312861"> <span class="iconBg" id="1958252555"> <span class="icon hasFontIcon icon-star" id="1196101067"></span> 
+</span> 
+ <span class="text" id="1158236840">Call us now</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1986756397 dmRespCol small-12 large-6 medium-6" id="1986756397"> <div data-element-type="spacer" class="u_1990176659 dmSpacer" id="1990176659"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_Protectors dmRespRow" style="text-align: center;" id="Protectors" data-anchor="Protectors"> <div class="dmRespColsWrapper" id="1458663698"> <div class="u_1856607306 dmRespCol small-12 large-6 medium-6" id="1856607306"> <div data-element-type="spacer" class="u_1473375075 dmSpacer" id="1473375075"></div> 
+</div> 
+ <div class="u_1526749326 dmRespCol small-12 large-6 medium-6" id="1526749326"> <div class="u_1192840012 dmRespRow" id="1192840012" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJbkNvbWJvIiwiZHVyYXRpb24iOjEsImRlbGF5IjowLCJpbnRlbnNpdHkiOjEsImRpciI6InJpZ2h0In19" data-anim-desktop="fadeInCombo"> <div class="dmRespColsWrapper" id="1920074492"> <div class="u_1228580140 dmRespCol small-12 medium-12 large-12" id="1228580140"> <div class="u_1914262853 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1914262853" style="transition: opacity 1s ease-in-out 0s;"> <h3><span style="display: initial; color: rgb(23, 38, 36);">Protector</span></h3> 
+</div> 
+ <div class="u_1387908932 dmNewParagraph ql-disabled" data-element-type="paragraph" data-version="5" id="1387908932" style="transition: opacity 1s ease-in-out 0s;"><p><span style="display: initial; font-weight: normal;">Like Stone Chips or rubber-rising is A hard wearing, flexible corrosion and chip resistant coating. Excellent sound deadening qualities. When dry, Stone Chip can be painted over with most paint coatings.</span></p><p style="direction: ltr;"><span style="display: initial; font-weight: bold;"><br/></span></p></div> 
+ <a data-display-type="block" class="u_1617790362 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/Commercial-paint#Getaquote" data-element-type="dButtonLinkId" id="1617790362"> <span class="iconBg" id="1245374829"> <span class="icon hasFontIcon icon-star" id="1779876179"></span> 
+</span> 
+ <span class="text" id="1553540846">Enquire now</span> 
+</a> 
+ <a data-display-type="block" class="u_1564551556 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="tel:+27114939030" data-element-type="dButtonLinkId" id="1564551556"> <span class="iconBg" id="1932290419"> <span class="icon hasFontIcon icon-star" id="1888389456"></span> 
+</span> 
+ <span class="text" id="1061203720">Call us now</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1394363445 dmRespRow dmSectionParallaxNew" style="text-align: center;" id="1394363445"> <div class="dmRespColsWrapper" id="1619043891"> <div class="dmRespCol small-12 medium-12 large-12 u_1626346195" id="1626346195"> <div class="u_1495613423 dmNewParagraph text-align-center" data-element-type="paragraph" id="1495613423" style="display: block; transition: none 0s ease 0s; text-align: center;" data-anchor="Partners" data-version="5"> <h2><span style="display: initial;">Our Brands</span></h2> 
+</div> <div class="u_1530895107 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="4" data-element-type="dPhotoGalleryId" data-desktop-text-layout="over" id="1530895107" data-placeholder="false" data-image-hover-effect="reverse-grayscale" data-image-animation="bounce" data-rows-to-show="100" data-enable-lazy-loading="true"> <ul class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1882140534"> <li class="photoGalleryThumbs" id="1252576953"> <div class="image-container" id="1935693212"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/mipa-logo.jpg" id="1653310045"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/mipa-logo-1920w.jpg" id="1349091941" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1035679372"> <span class="caption-inner" id="1075489492"> <a class="caption-button dmWidget clearfix" id="1864061622"> <span class="iconBg" id="1658856831"> <span class="icon hasFontIcon icon-star" id="1599066126"></span> 
+</span> 
+ <span class="text" id="1136202336">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1832338651"> <div class="image-container" id="1082055312"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/smirdex-logo.png" id="1965161918"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/smirdex-logo-1920w.png" id="1801129871" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1018769281"> <span class="caption-inner" id="1953452374"> <a class="caption-button dmWidget clearfix" id="1900364298"> <span class="iconBg" id="1533962229"> <span class="icon hasFontIcon icon-star" id="1433334493"></span> 
+</span> 
+ <span class="text" id="1259556994">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1963427932"> <div class="image-container" id="1232531074"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_glaker-logo.png" id="1599807115"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_glaker-logo-1920w.png" id="1387756145" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1587104941"> <span class="caption-inner" id="1581560435"> <a class="caption-button dmWidget clearfix" id="1260625256"> <span class="iconBg" id="1982950904"> <span class="icon hasFontIcon icon-star" id="1351266068"></span> 
+</span> 
+ <span class="text" id="1862012273">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1769649524"> <div class="image-container" id="1434262655"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_vollux_logo.jpg" id="1791580187"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_vollux_logo-1920w.jpg" id="1466625373" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1216498180"> <span class="caption-inner" id="1939447923"> <a class="caption-button dmWidget clearfix" id="1871264348"> <span class="iconBg" id="1259198742"> <span class="icon hasFontIcon icon-star" id="1985645768"></span> 
+</span> 
+ <span class="text" id="1745819371">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1739526761"> <div class="image-container" id="1902314827"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_3M.jpg" id="1521081363"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_3M-1920w.jpg" id="1784995108" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1174486760"> <span class="caption-inner" id="1470581829"> <a class="caption-button dmWidget clearfix" id="1288703559"> <span class="iconBg" id="1211508973"> <span class="icon hasFontIcon icon-star" id="1108198548"></span> 
+</span> 
+ <span class="text" id="1655007803">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1344139335"> <div class="image-container" id="1271525897"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_altezze-logo.png" id="1924221717"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_altezze-logo-1920w.png" id="1638962623" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1274701925"> <span class="caption-inner" id="1863289726"> <a class="caption-button dmWidget clearfix" id="1224411617"> <span class="iconBg" id="1410236555"> <span class="icon hasFontIcon icon-star" id="1169564185"></span> 
+</span> 
+ <span class="text" id="1101455715">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1985824204"> <div class="image-container" id="1998726350"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_cobra-logo.png" id="1897161268"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_cobra-logo-1920w.png" id="1797390421" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1119956905"> <span class="caption-inner" id="1547178212"> <a class="caption-button dmWidget clearfix" id="1771049546"> <span class="iconBg" id="1689462557"> <span class="icon hasFontIcon icon-star" id="1161182522"></span> 
+</span> 
+ <span class="text" id="1691562913">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1103298807"> <div class="image-container" id="1742689947"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_farecla-logo.jpg" id="1708875728"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_farecla-logo-1920w.jpg" id="1144925390" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1425436397"> <span class="caption-inner" id="1814094149"> <a class="caption-button dmWidget clearfix" id="1596042995"> <span class="iconBg" id="1457088560"> <span class="icon hasFontIcon icon-star" id="1810900561"></span> 
+</span> 
+ <span class="text" id="1687699042">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1251507799"> <div class="image-container" id="1441301194"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_fusion-logo.jpg" id="1447054112"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_fusion-logo-1920w.jpg" id="1929446801" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1841962557"> <span class="caption-inner" id="1780325766"> <a class="caption-button dmWidget clearfix" id="1196462855"> <span class="iconBg" id="1579488278"> <span class="icon hasFontIcon icon-star" id="1073704288"></span> 
+</span> 
+ <span class="text" id="1400637619">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1996981218"> <div class="image-container" id="1567260158"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/konan-logo.png" id="1477812647"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/konan-logo-1920w.png" id="1503778584" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1650479843"> <span class="caption-inner" id="1773863211"> <a class="caption-button dmWidget clearfix" id="1689908697"> <span class="iconBg" id="1491403936"> <span class="icon hasFontIcon icon-star" id="1236554411"></span> 
+</span> 
+ <span class="text" id="1741102907">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1376889505"> <div class="image-container" id="1204711108"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_durabak-logo.jpg" id="1291880153"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_durabak-logo-1920w.jpg" id="1533679411" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1784396857"> <span class="caption-inner" id="1512102228"> <a class="caption-button dmWidget clearfix" id="1055338554"> <span class="iconBg" id="1584474086"> <span class="icon hasFontIcon icon-star" id="1272422305"></span> 
+</span> 
+ <span class="text" id="1819500905">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1188642291"> <div class="image-container" id="1237700266"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_superlight-logo.png" id="1778841049"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_superlight-logo-1920w.png" id="1554253642" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1632776202"> <span class="caption-inner" id="1277074705"> <a class="caption-button dmWidget clearfix" id="1853910785"> <span class="iconBg" id="1007583893"> <span class="icon hasFontIcon icon-star" id="1417167802"></span> 
+</span> 
+ <span class="text" id="1101061216">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1291310212"> <div class="image-container" id="1363306124"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_tritec-logo.png" id="1183771298"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_tritec-logo-1920w.png" id="1661337231" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1996215804"> <span class="caption-inner" id="1085232094"> <a class="caption-button dmWidget clearfix" id="1071950863"> <span class="iconBg" id="1674130935"> <span class="icon hasFontIcon icon-star" id="1955462688"></span> 
+</span> 
+ <span class="text" id="1888618558">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+ <li class="photoGalleryThumbs" id="1218714800"> <div class="image-container" id="1796539143"> <a data-dm-multisize-attr="href" data-image-url="https://irp.cdn-website.com/c79180a1/dms3rep/multi/s_noval-logo.jpg" id="1725081311"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/s_noval-logo-1920w.jpg" id="1721576496" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="caption-container" style="display:none" id="1850984132"> <span class="caption-inner" id="1343634520"> <a class="caption-button dmWidget clearfix" id="1705514904"> <span class="iconBg" id="1808240707"> <span class="icon hasFontIcon icon-star" id="1571083144"></span> 
+</span> 
+ <span class="text" id="1002207549">Button</span> 
+</a> 
+</span> 
+</div> 
+</li> 
+</ul> 
+ <div class="photoGalleryViewAll link" isall="true" data-viewall="View more" data-viewless="View less" style="display:none;" id="1711066000"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_Getaquote dmRespRow" style="text-align: center;" id="Getaquote" data-anchor="Get a quote"> <div class="dmRespColsWrapper" id="1245074375"> <div class="dmRespCol small-12 medium-12 large-12 u_1328563284 content-removed" id="1328563284" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6InNsaWRlSW5SaWdodCIsInJldmVyc2UiOmZhbHNlfX0=" data-anim-desktop="slideInRight"> <a data-display-type="block" class="u_1573728410 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="tel:+27114939030" data-element-type="dButtonLinkId" id="1573728410"> <span class="iconBg" id="1137418162"> <span class="icon hasFontIcon icon-star" id="1143062466"></span> 
+</span> 
+ <span class="text" id="1001849531">Call us now</span> 
+</a> 
+ <div class="u_1087619964 dmNewParagraph" id="1087619964" style="transition:opacity 1s ease-in-out;line-height:initial;" data-element-type="paragraph" data-version="5"> <h4 class="text-align-center size-22"><span class="font-size-22" style="background-color: transparent; color: rgb(23, 38, 36); font-weight: 700; display: initial;">Request</span></h4> 
+</div> <div class="u_1062646077 dmNewParagraph" id="1062646077" style="transition-duration:1s;transition-timing-function:ease-in-out;transition-delay:initial;transition-property:opacity;display:block;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-36 text-align-center size-40"><span class="m-font-size-36 font-size-40" style="display: initial; font-weight: 700; color: rgb(23, 38, 36);">A Free Quote</span></h3> 
+</div> <div class="u_1402605857 dmNewParagraph" id="1402605857" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p class="text-align-center"><span style="color: rgb(23, 38, 36); display: initial;">Submit your request and we'll&nbsp; get back to you soon with our very best quote.</span></p></div> <div data-element-type="html" class="u_1408432960 dmCustomHtml" id="1408432960"> <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/v2.js">
+
+
+                                                                                                                                                                                    
+
+                </script> 
+ <script>
+
+
+  hbspt.forms.create({
+    region: "eu1",
+    portalId: "26113508",
+    formId: "92690c37-ec58-490a-889a-f763fe2c7df7"
+  });
+                                                                                                                                                                                    
+
+                </script> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="sticky-widgets-container-global" id="1992102843"> <div class="widget-5bd886 u_1030965915 sticky-desktop-position-bottom-left sticky-mobile-position-bottom-left dmCustomWidget" data-lazy-load="" data-title="" id="1030965915" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="5bd886efb15a44fd98f083f461519ec8" data-widget-version="224" data-widget-config="eyJ3YU51bWJlciI6IisyNzcyMDgyNTU5OCIsImJ0blRleHQiOiIgV2hhdHNBcHAgdXMiLCJkZWZhdWx0TWVzc2FnZSI6IiIsImFsdCI6Ik1lc3NhZ2UgdXMgb24gV2hhdHNBcHAiLCJ3YUxheW91dCI6Imljb25Pbmx5In0="> <a class="align-center full" target="_blank" data-display-type="block"> <span class="full iconBg"> <span class="full icon"><img class="full" src="https://dd-cdn.multiscreensite.com/editor/whatsApp/whatsapp_layout_5.svg" alt="Message us on WhatsApp" onerror="handleImageLoadError(this)"/></span> 
+</span> 
+</a> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="dmRespRow u_1788661387 fullBleedChanged fullBleedMode" id="1788661387"> <div class="dmRespColsWrapper" id="1701130781"> <div class="dmRespCol large-12 medium-12 small-12 u_1667111970" id="1667111970"> <div class="u_1545026631 dmRespRow" id="1545026631"> <div class="dmRespColsWrapper" id="1721337622"> <div class="u_1800978063 dmRespCol small-12 large-5 medium-5" id="1800978063"> <div class="u_1135327822 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1135327822" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h3 class="m-text-align-center"><a href="/#MessageUs" runtime_url="/#MessageUs" type="anchor" style="display: initial; color: rgb(255, 255, 255);">Get Your Free Estimate Now!</a></h3> 
+</div> 
+</div> 
+ <div class="u_1512826200 dmRespCol small-12 large-3 medium-3" id="1512826200"> <div class="dmNewParagraph u_1315915488" data-element-type="paragraph" data-version="5" id="1315915488" style="transition: none 0s ease 0s; text-align: left;"> <h4 class="text-align-center m-text-align-center"><span class="" style="color: rgb(255, 255, 255); display: initial;"><span style="color: rgb(255, 255, 255); display: initial;">Phone:</span> 
+</span><a href="tel:+27114939030" target="_blank" type="call" class="m-font-size-14 font-size-20" style="color: rgb(255, 255, 255); display: initial;">+27 11 493 9030</a></h4> 
+</div> 
+</div> 
+ <div class="u_1241568630 dmRespCol small-12 large-4 medium-4" id="1241568630"> <div class="u_1060373336 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1060373336" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h4 class="m-text-align-center text-align-right"><a href="mailto:Email: info1@tonyscolours.co.za" target="_blank" type="email" style="color: rgb(255, 255, 255); display: initial;">Email:</a><span single-space="true" class="" style="display: initial;"> <span style="display: initial;"></span> 
+</span><a href="mailto:Email: info1@tonyscolours.co.za" target="_blank" type="email" class="m-font-size-14 font-size-20" style="display: initial; color: rgb(255, 255, 255);">info1@tonyscolours.co.za</a></h4> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1632155419" style="text-align: center;" id="1632155419"> <div class="dmRespColsWrapper" id="1253858808"> <div class="u_1063824722 dmRespCol small-12 medium-12 large-12" id="1063824722"> <div class="dmRespRow u_1154159162" id="1154159162"> <div class="dmRespColsWrapper" id="1124965304"> <div class="u_1814373720 dmRespCol small-12 medium-4 large-4" id="1814373720"> <div class="u_1637368367 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1637368367"><img src="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/Final+Logo+2+copy-1920w-1920w.png" alt="" id="1541386255" class="" data-dm-image-path="https://irp.cdn-website.com/c79180a1/dms3rep/multi/Final+Logo+2+copy-1920w.png" width="1920" height="1044" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div class="u_1734396784 dmRespCol empty-column small-12 hide-for-small large-1 medium-1" id="1734396784"></div> 
+ <div class="u_1969245814 dmRespCol small-12 large-7 medium-7" id="1969245814"> <div class="u_1638888612 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1638888612" style="transition: opacity 1s ease-in-out 0s;"> <h4><span style="color: rgb(255, 255, 255); display: initial;">Address:</span></h4> 
+ <h5 class="m-text-align-center"><span style="display: initial; font-family: 'Be Vietnam'; font-weight: bold; color: rgb(255, 255, 255);">Booysen- Johannesburg:</span></h5> 
+<p class="m-size-11 size-14"><span class="font-size-14 m-font-size-11" style="display: initial; color: rgb(255, 255, 255);">Cnr Fraser and, Ophir-Booysens Rd, Booysens, Johannesburg, 2091</span></p><p><span style="display: initial;"><br/></span></p> <h5 class="m-text-align-center"><span style="display: initial; font-family: 'Be Vietnam'; font-weight: bold; color: rgb(255, 255, 255);">Wynberg - Johannesburg:</span></h5> 
+<p class="m-size-11 size-14"><span class="font-size-14 m-font-size-11" style="display: initial; color: rgb(255, 255, 255);">600 Louis Botha Ave, Bramley, Johannesburg, 2018</span><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1852154936 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1852154936"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1812255534"/></div> 
+ <div class="dmRespRow u_1332105147" id="1332105147"> <div class="dmRespColsWrapper" id="1222537199"> <div class="u_1707303505 dmRespCol small-12 large-3 medium-3" id="1707303505"> <div class="u_1163959735 widget-1f5975 dmCustomWidget" data-lazy-load="" data-title="" id="1163959735" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="22" data-widget-config="eyJjb3B5cmlnaHRUZXh0IjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPkFsbCBSaWdodHMgUmVzZXJ2ZWQgfCBUb255cyBDb2xvdXJzPC9wPiJ9"> <div class="copyright"> <div>&copy; 2023&nbsp;</div> 
+ <div><p class="rteBlock">All Rights Reserved | Tonys Colours</p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1664367919 dmRespCol small-12 large-5 medium-5" id="1664367919"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1266784991" style="transition: opacity 1s ease-in-out 0s;"> <h6 class="m-text-align-center"><a href="/privacy" runtime_url="/privacy" type="page" style="display: initial;">Terms &amp; Privacy</a></h6> 
+ <h6 class="m-text-align-center"><span style="display: initial;"><span class="ql-cursor">﻿</span></span></h6> 
+ <h6 class="m-text-align-center"><span class="" style="color: rgb(255, 255, 255); display: initial;"><span style="color: rgb(255, 255, 255); display: initial;">Website Developed by</span> 
+</span><a href="http://www.webshure.com" target="_blank" runtime_url="http://www.webshure.com" type="url" style="display: initial;">WEBSHURE</a></h6> 
+</div> 
+</div> 
+ <div class="u_1854310314 dmRespCol small-12 large-undefined medium-undefined medium-4 large-4" id="1854310314"> <div class="u_1018080270 align-center text-align-center dmSocialHub" id="1018080270" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="mailto:info1@tonyscolours.co.za" dm_dont_rewrite_url="true" aria-label="email" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)"> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://web.whatsapp.com/send?phone=+27720825598" target="_blank" dm_dont_rewrite_url="true" aria-label="whatsapp" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Whatsapp&apos;)"> <span class="dmSocialWhatsapp dm-social-icons-whatsapp oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.facebook.com/Tonys.Colours" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.instagram.com/tonys_colours/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.linkedin.com/company/tony-s-colours" target="_blank" dm_dont_rewrite_url="true" aria-label="linkedin" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)"> <span class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.google.com/maps/place/Tony&apos;s+Colours+-+Automotive+Paints+%26+Accessories/@-26.2564669,27.9852,12z/data=!4m19!1m13!4m12!1m4!2m2!1d28.1005628!2d-26.2840662!4e1!1m6!1m2!1s0x1e950ecbbe542a61:0x8146a6c4a27a6804!2stonys+colours!2m2!1d28.0219371!2d-26.2291911!3m4!1s0x1e950ecbbe542a61:0x8146a6c4a27a6804!8m2!3d-26.2291911!4d28.0219371" target="_blank" dm_dont_rewrite_url="true" aria-label="google_my_business" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;GoogleMyBusiness&apos;)"> <span class="dmSocialGoogleMyBusiness dm-social-icons-google-my-business oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="showOnMedium layout-drawer-hamburger hamburger-on-header" id="layout-drawer-hamburger" role="button" aria-label="menu opener" tabindex="0"> <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+<!-- ========= JS Section ========= -->
+
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+<script>
+    window.customWidgetsFunctions["5bd886efb15a44fd98f083f461519ec8~224"] = function (element, data, api) {
+        
+$(element).find('a').each(function() {
+    var href = buildNewHref(cleanPhoneText(data.config.waNumber), cleanAndEncodeText(data.config.defaultMessage));
+    $(this).attr('href', href);
+    
+    function handleClick(){
+        dm_gaq_push_event && dm_gaq_push_event('Whatsapp', 'click')
+        window.dmsnowplow && window.snowplow('trackStructEvent', 'Whatsapp-share','click')
+    }
+    
+    element.addEventListener("click", handleClick)
+
+})
+
+function cleanPhoneText(phone) {
+    return phone ? phone.replace(/[^0-9]/g, '') : "";
+}
+
+function cleanAndEncodeText(text) {
+    var returnString="";
+    if (text) {
+        returnString = text.replace(/<br>/g, '\n');
+        returnString = encodeURIComponent(returnString);
+    }
+    return returnString;
+}
+
+function buildNewHref (phone, text) {
+    var href;
+    if (data.inEditor) {
+        //editor is on touch device
+        if (window.isMobileDevice || window.parent.isTouchDevice) {
+            href = "https://wa.me/" + ( phone ? ( phone + '?' ) : '?' ) + "text=" + text;
+        }
+        //etitor on desktop
+        else {
+            href = "https://web.whatsapp.com/send?phone=" + phone + "&text=" + text;
+        }
+    }
+    // not in editor - runtime
+    else {
+         if (data.device === "desktop") {
+             href = "https://web.whatsapp.com/send?phone=" + phone + "&text=" + text;
+         }
+         //on touch device
+         else {
+             href = "https://wa.me/" + ( phone ? ( phone + '?' ) : '?' ) + "text=" + text;
+         }
+    }
+    return href;
+}
+
+    };
+</script>
+<script type="text/javascript">
+
+    var d_version = "22..90";
+    var build = "2023-06-22T12_54_20";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2023-06-22T12_54_20";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+
+
+</script>
+<!-- Load jQuery -->
+<script type="text/javascript" id='d-js-jquery'
+        src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+<!-- End Load jQuery -->
+
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = ' <div> <p class=\"rteBlock\">We use cookies to ensure that we give you the best experience on our website. To learn more, go to the <a value=\"privacy\" label=\"\" type=\"page\" href=\"\/privacy\" data-runtime-url=\"\/privacy\">Privacy Page<\/a>.<\/p> \n<\/div> \n';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id='d-js-params'>
+    window.jQuery.migrateMute = true;
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["google.places.key"] = 'AIzaSyBAwUOqPUB1CU31yDztoZYaUE7sPv4ktEI';
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/3531';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/3531';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["feature.flag.addTargetBlankToExternalLinks"] =true;
+    rtCommonProps["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtCommonProps["keyboard.navigation.enabled"] =true;
+    rtCommonProps["runtime.navigationWidget.menu.clipPath"] =true;
+    rtCommonProps["scripts.widgetCount.enabled"] =true;
+    rtCommonProps["maps.cookiebot.enabled"] =true;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["ecom.ecwid.categoryPage.modifyLinks"] = true;
+    rtCommonProps["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtCommonProps["ecom.ecwid.fixFacebookLink"] = true;
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["runtime.save.restore.function.bind"] =true;
+    rtCommonProps["feature.flag.photo.gallery.exact.size"] =false;
+    rtCommonProps["new.store.fix.ecwid.back.bug"] =true;
+    rtCommonProps["new.store.accountPage.ecwid.signIn.fix"] =true;
+    rtCommonProps["fix.ecwid.sign.in.page.with.return.url"] =true;
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+    rtCommonProps["geocode.search.localize"] =false;
+    rtCommonProps["facebook.runtime.widgets.upgrade"] =true;
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.contact.form.fix.for.attribute"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["contact.form.date.format.enabled"] = true;
+    rtCommonProps["platform.monolith.personalization.userVisitsCondition.inClient.enabled"] = true;
+    rtCommonProps["ecom.widgets.menu.categories.toggles.enabled"] =  true;
+    rtCommonProps["filestack.uploadToTempBucket.enabled"] = true;
+    rtCommonProps["platform.monolith.loginBar.getUserLoggedIn.enabled"] = true;
+</script>
+<script src="https://static.cdn-website.com/mnlt/production/3531/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"  id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="https://static.cdn-website.com/mnlt/production/3531/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+<script>jQuery.DM.updateWidthAndHeight();
+$(window).resize(function () {
+    
+});
+$(window).bind("orientationchange", function (e) {
+    $.layoutManager.initLayout();
+    
+});
+$(document).resize(function () {
+    
+});
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+ 	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+ 	if (campaign && campaign != null && campaign.length > 1) {
+ 		campaign = campaign[1];
+ 		document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+ 	}
+}());
+</script>
+<script type="text/javascript" >
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+  </script>
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: 'c79180a1'
+});
+
+dmsnowplow('trackPageView')
+$.each(_dm_insite, function(idx, rule) {
+	//('trackStructEvent', 'category','action','label','property','value');
+			// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+	        // the tracking is in popup.js
+			if (rule.actionName !== "popup") {
+                dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+            }
+ 			$(document).ready(function(){
+ 				$.DM.events.trigger('event-ruleTriggered', {value: rule})}
+ 			);
+ 		});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<!-- Alias: c79180a1 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+// Collects client data and updates cookies used by smart sites
+var expireDays = 365,visitLength = 30 * 60000;
+$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), expireDays);
+function setSmartSiteCookies() {
+	setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+}
+$.DM.events.on("afterAjax", setSmartSiteCookies);
+setSmartSiteCookies();
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<script>
+    jQuery(window).on('load', function () {
+        try {
+            jQuery.DM.updateIOSHeight();
+        } catch (e) {
+        }
+    });
+</script>
+<script>
+    dmAPI.loadScript(
+        window.rtCommonProps['common.resources.cdn.host'] + '/libs/lozad/1.15.0/lozad.min.js',
+        function () {
+            dmAPI.runOnReady('lozadInit', function () {
+                window.document.querySelectorAll('img.lazy').forEach(function (img) {
+                    img.addEventListener('load', function (event) {
+                        var img = event.target;
+                        img.style.filter = 'blur(0)';
+                        setTimeout(function () {
+                            $(img).closest('.imageWidget').addClass('lazyLoaded');
+                        }, 250)
+                    });
+                });
+                lozad('.lazy', {
+                    threshold: 0.1,
+                    loaded: function (element) {
+                        if (element.getAttribute('data-background-image')) {
+                            element.style.setProperty(
+                                'background-image',
+                                "url('" + element.getAttribute('data-background-image') + "')",
+                                "important"
+                            );
+                        }
+                    }
+                }).observe();
+            });
+        }
+    );
+</script>
+<!--  End Script tags -->
+
+<!--  Begin Body End Markup -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDL699V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><!--  End Body End Markup -->
+
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+</body>
+</html>
