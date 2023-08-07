@@ -2861,6 +2861,8 @@
   <meta property="og:title" content="Tony's Colours | Home" />
   <meta property="og:image" content="https://lirp.cdn-website.com/c79180a1/dms3rep/multi/opt/Final+Logo+1-1920w.png" />
 
+  <link rel="stylesheet" href="SendAMessageCSS.css">
+
   <!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
 </head>
 
@@ -4354,17 +4356,43 @@
                                   <div class="u_1055854996 dmNewParagraph" id="1055854996" style="transition: opacity 1s ease-in-out; display: block;" data-version="5">
                                     <p class="text-align-center"><span style="display: initial;">Send us your message and we'll&nbsp; get back to you soon.<span class="ql-cursor">﻿</span></span></p>
                                   </div>
-                                  <div data-element-type="html" class="u_1084489041 dmCustomHtml" id="1084489041">
-                                    <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/v2.js">
+                                  <div>
+                                    <form id="form">
+                                        <div class="field">
+                                          <label for="first_name">First Name</label>
+                                          <input type="text" name="first_name" id="first_name">
+                                        </div>
+                                        <div class="field">
+                                          <label for="last_name">Last Name</label>
+                                          <input type="text" name="last_name" id="last_name">
+                                        </div>
+                                        <div class="field">
+                                          <label for="phone">Phone Number</label>
+                                          <input type="tel" name="phone" id="phone">
+                                        </div>
+                                        <div class="field">
+                                          <label for="email">Email</label>
+                                          <input type="email" name="email" id="email">
+                                        </div>
+                                        <div class="field">
+                                          <label for="message">Message</label>
+                                          <textarea name="message" id="message" rows="4"></textarea>
+                                        </div>
 
-                                    </script>
-                                    <script>
-                                      hbspt.forms.create({
-                                        region: "eu1",
-                                        portalId: "26113508",
-                                        formId: "1de4bf48-34f4-4094-8549-2821aff5f95b"
-                                      });
-                                    </script>
+                                        <input type="submit" id="button" value="Send Email">
+                                      </form>
+
+
+                                      <script type="text/javascript"
+                                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                                      <script type="text/javascript">
+                                        emailjs.init('ZreCB93qoyYozSMwL')
+                                      </script>
+
+                                  <script type="text/javascript" src="SendAMessageJS.js"></script> 
+
+
                                   </div>
                                 </div>
                               </div>

@@ -1,0 +1,43 @@
+.nice-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+  
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  .field label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .field textarea {
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3AA84C;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  

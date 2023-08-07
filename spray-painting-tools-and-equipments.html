@@ -2944,7 +2944,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-
+  <link rel="stylesheet" type="text/css" href="RequestAQuoteCSS.css">
 <!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
 </head>
 
@@ -4207,25 +4207,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </a> 
  <div class="dmNewParagraph u_1561607393" id="1561607393" style="transition:opacity 1s ease-in-out;line-height:initial;" data-element-type="paragraph" data-version="5"> <h4 class="text-align-center size-22"><span class="font-size-22" style="display: initial; font-weight: 700; color: rgb(23, 38, 36); background-color: transparent;">Request</span></h4> 
 </div> <div class="u_1445287547 dmNewParagraph" id="1445287547" style="transition-duration:1s;transition-timing-function:ease-in-out;transition-delay:initial;transition-property:opacity;display:block;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 class="m-size-36 text-align-center size-40"><span class="m-font-size-36 font-size-40" style="display: initial; font-weight: 700; color: rgb(23, 38, 36);">A Free Quote</span></h3> 
-</div> <div class="u_1150363531 dmNewParagraph" id="1150363531" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p class="text-align-center"><span style="color: rgb(23, 38, 36); display: initial;">Submit your request and we'll&nbsp; get back to you soon with our very best quote.</span></p></div> <div data-element-type="html" class="u_1128663771 dmCustomHtml" id="1128663771"> <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/v2.js">
-
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-
-                </script> 
- <script>
-
-
-  hbspt.forms.create({
-    region: "eu1",
-    portalId: "26113508",
-    formId: "2c5c8dee-533e-423f-8d7d-434d77ea2cb8"
-  });
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-
-                </script> 
-</div> 
-</div> 
+</div> <div class="u_1150363531 dmNewParagraph" id="1150363531" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p class="text-align-center"><span style="color: rgb(23, 38, 36); display: initial;">Submit your request and we'll&nbsp; get back to you soon with our very best quote.</span></p></div> 
+<div>
+	<form id="form" class="nice-form">
+		<div class="field">
+		  <label for="first_name">First Name</label>
+		  <input type="text" name="first_name" id="first_name" required>
+		</div>
+		<div class="field">
+		  <label for="last_name">Last Name</label>
+		  <input type="text" name="last_name" id="last_name" required>
+		</div>
+		<div class="field">
+		  <label for="phone">Phone Number</label>
+		  <input type="tel" name="phone" id="phone" required>
+		</div>
+		<div class="field">
+		  <label for="email">Email</label>
+		  <input type="email" name="email" id="email" required>
+		</div>
+		<div class="field">
+		  <label for="product">Select a Product</label>
+		  <select name="product" id="product" required>
+			<option disbaled value>Please Select</option>
+			<option value="Welding Equipment">Welding Equipment</ption>option>
+			<option value="Spray Guns">Spray Guns</option>
+			<option value="Air Tools">Air Tools</option>
+			<option value="Panel Beating Tools">Panel Beating Tools</option>
+			<option value="Inrared Heaters">Inrared Heaters</option>
+			<option value="Orbital Sanders">Orbital Sanders</option>
+		  </select>
+		</div>
+		<div class="field">
+		  <label for="message">Message</label>
+		  <textarea name="message" id="message" rows="4" required></textarea>
+		</div>
+	
+		<input type="submit" id="button" value="Send" style="text-align: center;">
+	  </form>
+	
+	<script type="text/javascript"
+	  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	
+	<script type="text/javascript">
+	  emailjs.init('ZreCB93qoyYozSMwL')
+	</script>
+</div>
+<script type="text/javascript" src="RequestAQuoteJS.js"></script> 
 </div> 
 </div> 
 </div> 

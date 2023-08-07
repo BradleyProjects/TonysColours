@@ -1630,7 +1630,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-
+  <link rel="stylesheet" href="RequestTrainingCSS.css">
 <!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
 </head>
 
@@ -2977,24 +2977,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </span> 
  <span class="text" id="1850296577">Download Schedule</span> 
 </a> 
- <div data-element-type="html" class="u_1804191990 dmCustomHtml" id="1804191990"> <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/v2.js">
-
-
-                                                                                                            
-
-                </script> 
- <script>
-
-
-  hbspt.forms.create({
-    region: "eu1",
-    portalId: "26113508",
-    formId: "5560c8dc-63e5-482f-852d-c4a751a2bc53"
-  });
-                                                                                                            
-
-                </script> 
-</div> 
+ <div>
+    <form id="form" class="contact-form">
+        <div class="field">
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" id="first_name" required>
+        </div>
+        <div class="field">
+          <label for="last_name">Last Name</label>
+          <input type="text" name="last_name" id="last_name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="phone" id="phone" required>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </div>
+    
+        <input type="submit" id="button" value="Send Email">
+      </form>
+    
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+      emailjs.init('WBc0Y-YZY6OgnWVJs')
+    </script>
+ </div>
+ <script type="text/javascript" src="RequestTrainingJS.js"></script> 
 </div> 
 </div> 
 </div> 
